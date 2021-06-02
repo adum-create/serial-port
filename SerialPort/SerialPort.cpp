@@ -9,8 +9,9 @@ SerialPort::SerialPort(QWidget *parent)
 
 	//初始化参数、
 	concentration = 0;
-	ui->lineEdit_file->setText(tr("默认路径"));
-	
+	ui->lineEdit_file->setText(tr("E:\\Result\\3 实时DCS.txt"));
+	filename_of_txt = tr("E:/Result/3 实时DCS.txt");
+
 	//串口相关
 	concentration_of_send = 0;//发送数据初始化为0
 	m_serialPort = new QSerialPort();
@@ -201,9 +202,15 @@ void SerialPort::sendInfo(const QString &info)
 //设置浓度信息
 void SerialPort::set_concentration()
 {
-	concentration_of_send = concentration;
-	//电流信号已经是mg/m^3
-	concentration_of_send = 819 + concentration_of_send*3.276; //转化成电流信号
+	//获取检测范围
+	QString min_qstring = ui->lineEdit_min->text();
+	double min = min_qstring.toDouble() ;
+
+	QString max_qstring = ui->lineEdie_max->text();
+	double max = max_qstring.toDouble();
+
+	concentration_of_send = ((concentration-min)/(max-min)) * 3276 +819;
+
     //如果电流大于4095则将其设置为4095
 	if (concentration_of_send > 4095)
 	{

@@ -6,15 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>407</width>
-    <height>465</height>
+    <width>362</width>
+    <height>442</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>SerialPort</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QHBoxLayout" name="horizontalLayout_2">
+   <layout class="QHBoxLayout" name="horizontalLayout_4">
     <item>
      <widget class="QFrame" name="frame_3">
       <property name="frameShape">
@@ -89,6 +89,44 @@
         </widget>
        </item>
        <item>
+        <widget class="QWidget" name="widget_3" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>检测范围：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_min"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="minimumSize">
+             <size>
+              <width>30</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>30</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;—&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdie_max"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
         <widget class="QFrame" name="frame_19">
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -153,7 +191,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>407</width>
+     <width>362</width>
      <height>26</height>
     </rect>
    </property>

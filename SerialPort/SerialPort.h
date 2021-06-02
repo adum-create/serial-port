@@ -39,6 +39,7 @@ public:
 	double concentration;
 	QString filename_of_txt;
 	
+	
 
 
 private:
