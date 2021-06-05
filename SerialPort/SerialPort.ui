@@ -138,7 +138,7 @@
           <item>
            <widget class="QLabel" name="label_15">
             <property name="text">
-             <string>离线测试浓度（mg/m³）：</string>
+             <string>检测浓度（mg/m³）：</string>
             </property>
            </widget>
           </item>
